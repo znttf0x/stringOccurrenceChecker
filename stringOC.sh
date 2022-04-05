@@ -6,7 +6,7 @@
 if [ -z "$1" ]; then
 	echo "Receives a wordlist (\$1) and outputs which strings are <not> contained in the file (\$2)."
 	exit
-elif [ ! -f "$1" ] && [ ! -f "$2" ];then
+elif [ ! -f "$1" ] || [ ! -f "$2" ];then
 	echo "Both arguments should be files."
 	exit
 fi
